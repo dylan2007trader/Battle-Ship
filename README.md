@@ -7,30 +7,32 @@ Overview
 This program implements a simplified, text-based version of the classic Battleship game.
 Player 1 provides ship placements, and Player 2 provides guesses. The program:
 
-Loads ship placements and guesses from two input files
+Loads ship placements and guesses from two input files:
+
 Validates fleet composition, sizes, orientations, and bounds
+
 Builds an internal 10×10 board
+
 Places ships using a custom coordinate-conversion system
+
 Processes guesses sequentially
+
 Prints hits, misses, repeat guesses, and sunk ship events
+
 Ends when all ships are sunk
 
-The program requires two input files:
-Ship placement file
-Guesses file
+The program requires two input files: Ship placement file and Guesses file
 
-You will be prompted twice:
-ships.txt
-guesses.txt
+You will be prompted twice: ships.txt, guesses.txt
 
-Ship File
+Ship File: 
 Each ship must appear exactly once. The valid ships are:
 
-Type	Size	Name
-A	5	Aircraft Carrier
-B	4	Battleship
-S	3	Submarine
-D	3	Destroyer
+Type	Size	Name:
+A	5	Aircraft Carrier,
+B	4	Battleship,
+S	3	Submarine,
+D	3	Destroyer,
 P	2	Patrol Boat
 
 Each line must follow this format:
