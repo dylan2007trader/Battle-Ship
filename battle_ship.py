@@ -1,7 +1,4 @@
 """
-    File: battleship.py
-    Author: Dylan Ackerman
-    Course: CSC 120, Fall 2025
     Purpose: Implements a simple Battleship game. Handles the board, ships, 
         coordinate conversion, ship placement, and processing guesses. 
         Prints hits, misses, and sinking events. Validates ship positions and
