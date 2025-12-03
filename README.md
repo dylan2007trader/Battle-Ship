@@ -36,13 +36,20 @@ D	3	Destroyer,
 P	2	Patrol Boat
 
 Each line must follow this format:
+
 <ShipType> x1 y1 x2 y2
 
 Example
+
 A 0 0 0 4
+
+
 B 2 2 5 2
+
 S 9 0 9 2
+
 D 4 7 6 7
+
 P 8 8 9 8
 
 Guess File
@@ -53,50 +60,55 @@ x y
 Example:
 
 0 0
+
 1 1
+
 5 2
 
 
 Guesses outside the board or with incorrect formatting result in:
 
-Output Behavior
-Misses
-miss
-miss (again)
+Output Behavior:
 
-Hits
-hit
-hit (again)
+Misses:
+'miss',
+'miss (again)'
 
-Sinking a ship
-When the final part of a ship is hit:
-A sunk
+Hits:
+
+'hit',
+'hit (again)'
+
+Sinking a ship:
+'A sunk'
 
 After all ships are sunk:
-all ships sunk: game over
+'all ships sunk: game over'
 
-Internal Details
+
 Board Structure
 
 10×10 grid of GridPos objects
+
 Each cell stores: A reference to a Ship (or None), A _guessed boolean, Ship Handling
 
 A Ship tracks: Its kind (A/B/S/D/P), Its size, Its health (_active), Two endpoint coordinates, hit_ship() decreases _active and prints hit/sunk messages.
 
 
-All input coordinates are converted using:
-convert_coordinates()
-This swaps and transforms coordinates to match the assignment’s unique grid system.
-
 Game Loop
-read_inputs() iterates through guesses until:
-All ships are sunk
-Or guesses run out
+read_inputs() iterates through guesses until: all ships are sunk or guesses run out
 
-Error Handling
+Error Handling:
+
 The program exits immediately on:
+
 Overlapping ships
+
+
 Out-of-bounds placements
+
 Incorrect fleet composition
+
 Incorrect ship size
+
 Non-horizontal/vertical ships
