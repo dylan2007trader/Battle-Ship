@@ -4,6 +4,7 @@ I thought it would be fun to implement battle ship in python.
 Battleship Game – README
 Overview
 
+
 This program implements a simplified, text-based version of the classic Battleship game.
 Player 1 provides ship placements, and Player 2 provides guesses. The program:
 
@@ -21,9 +22,11 @@ Prints hits, misses, repeat guesses, and sunk ship events
 
 Ends when all ships are sunk
 
+
 The program requires two input files: Ship placement file and Guesses file
 
 You will be prompted twice: ships.txt, guesses.txt
+
 
 Ship File: 
 Each ship must appear exactly once. The valid ships are:
@@ -51,6 +54,7 @@ S 9 0 9 2
 D 4 7 6 7
 
 P 8 8 9 8
+
 
 Guess File
 
@@ -86,6 +90,7 @@ After all ships are sunk:
 'all ships sunk: game over'
 
 
+
 Board Structure
 
 10×10 grid of GridPos objects
@@ -95,8 +100,11 @@ Each cell stores: A reference to a Ship (or None), A _guessed boolean, Ship Hand
 A Ship tracks: Its kind (A/B/S/D/P), Its size, Its health (_active), Two endpoint coordinates, hit_ship() decreases _active and prints hit/sunk messages.
 
 
+
 Game Loop
 read_inputs() iterates through guesses until: all ships are sunk or guesses run out
+
+
 
 Error Handling:
 
